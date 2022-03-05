@@ -12,7 +12,7 @@ initDist(){
 #------------------------------------------
 
 #url访问目录，这个是你 github 仓库的名字
-initDist "module.exports = '/notes/'"
+initDist "module.exports = '/GBlog/'"
 
 # 生成静态文件
 npm run build
@@ -23,13 +23,13 @@ cd docs/.vuepress/dist
 if [ -z "$GITHUB_TOKEN" ]; then
   # 手动部署
   msg='deploy'
-  githubUrl=git@github.com:oddfar/notes.git
+  githubUrl=git@github.com:byzh123/GBlog.git
 else
   # 自动部署
   msg='来自github actions的自动部署'
-  githubUrl=https://oddfar:${GITHUB_TOKEN}@github.com/oddfar/notes.git
-  git config --global user.name "oddfar"
-  git config --global user.email "oddfar@163.com"
+  githubUrl=https://byzh123:${GITHUB_TOKEN}@github.com:byzh123/GBlog.git
+  git config --global user.name "byzh123"
+  git config --global user.email "liguangnilucky@163.com"
 fi
 git init
 git add -A
